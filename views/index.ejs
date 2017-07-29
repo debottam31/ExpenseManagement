@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Expenses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Titillium+Web" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/bootstrap-datepicker.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header">
+
+        <% include partials/headerTemplate %>
+    </div>
+    <div class="container">
+        <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#addExpense"><span class="glyphicon glyphicon-tasks"></span> Add Expense</button>
+        <div class="modal fade bd-example-modal-lg" id="addExpense" tabindex="-1" role="dialog" aria-labelledby="addexpensemodal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-level="close"><span aria-hidden="true">&times;</span>
+                        </button>
+                        <h1 class="modal-title" id="addexpensemodal">Add New Expense</h1>
+                    </div>
+                    <!--modal-header-->
+                    <div class="modal-body">
+
+                        <form class="addnewform clearfix" role="form" autocomplete="off" action="Addentry" method="post">
+
+                            <div class="table-responsive">
+                                <table class="table expenseTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Item Name</th>
+                                            <th>Item Type</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr_clone">
+                                            <td><input type="text" class="form-control datepicker" placeholder="date" id="datepicker" name="newDate[]" /></td>
+                                            <td><input type="text" class="form-control" placeholder="Item Name" name="itemName" id="itemNameId" /></td>
+                                            <td><input type="text" class="form-control" placeholder="Item type" name="itemType" /></td>
+                                            <td><input type="text" class="form-control" placeholder="amount" name="amunt" /></td>
+                                            <td><button type="button" class="btn btn-success addRow"><span class="glyphicon glyphicon-plus"></span></button></td>
+                                            <td><button type="button" class="btn btn-danger removerow "><span class="glyphicon glyphicon-minus"></span></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--modal-content-->
+            </div>
+            <!--modal-dialog-->
+        </div>
+    </div>
+
+
+    <script src="/js/addexpenses.js"></script>
+</body>

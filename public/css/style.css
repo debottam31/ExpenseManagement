@@ -1,0 +1,42 @@
+.navbar{
+	margin-top: 0px;
+	padding-top: 0px;
+	background-color: #424242;
+	height: 70px;
+	border-bottom: 0px;
+}
+.navbar-brand{
+	margin: 0px;
+	padding: 0px;
+}
+.image{
+	width: 70px;
+	height: 70px;
+	padding-top: 0px;
+	float: left;
+	margin-top: -1px;
+}
+.navbar-text{
+	font-family: 'Pacifico', cursive;
+	color: #E0F2F1;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.navbar-right{
+	margin-top: 19px;
+	font-size: 15px;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+.navbar-nav>li>a{
+	color:#80DEEA;
+
+}
+.navbar-nav>li>a:hover,.navbar-nav>li>a:focus{
+	color: #006064;
+}
+.navbar-nav li.active>a{
+	background-color: #EEE;
+	color:#006064; 
+}
