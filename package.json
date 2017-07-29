@@ -1,0 +1,15 @@
+{
+  "name": "expensemanager",
+  "version": "1.0.0",
+  "description": "Expense Management Website for PG",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "manage",
+    "expenses"
+  ],
+  "author": "debottam/jeet",
+  "license": "ISC"
+}
